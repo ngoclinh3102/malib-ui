@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { Stack } from '@mui/material'
+import { Sodoku } from './pages'
+import { Header } from './components'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Stack sx={{ width: '100%', maxWidth: '1920px' }}>
+      <Header />
+      <Sodoku />
+    </Stack>
+  )
 }
 
-export default App;
+export default App
