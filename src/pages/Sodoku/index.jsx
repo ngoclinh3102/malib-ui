@@ -105,8 +105,6 @@ const Sodoku = () => {
 		}
 		setBoard(BASE_BOARD.map((row) => [...row]))
 		setSelected({ i: -1, j: -1 })
-		console.log('board 1\n', boards[1])
-		console.log('board 2\n', boards[2])
 	}
 
 	useEffect(() => {
