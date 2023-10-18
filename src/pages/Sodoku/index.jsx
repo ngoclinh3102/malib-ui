@@ -98,7 +98,6 @@ const Sodoku = () => {
 	}
 
 	const changeDifficulty = () => {
-		console.log(difficulty)
 		difficulty = difficulty === 1 ? 2 : 1
 		for (let i = 0; i < 9; i++) {
 			BASE_BOARD[i] = [...boards[difficulty][i]]
@@ -260,7 +259,7 @@ const Sodoku = () => {
 							},
 						}}
 					>
-						{difficulty === 1 ? 'Easy' : 'Hard'}
+						Change Board
 					</Stack>
 				</Grid>
 				<Grid item xs={12}>
