@@ -1,0 +1,28 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  pre_build:
+    commands:
+      - echo Installing dependencies
+      - npm install
+  build:
+    on-failure: ABORT
+    commands:
+      - echo Build started on 'date'
+      - cp .env
+      - npm run build
+      - aws --region=ap-southeast-1 s3 sync --delete build s3://malibui
+      # - aws --region=<your-region> s3 sync --delete build s3://<your-s3-bucket>
+  post_build:
+    on-failure: ABORT
+    commands:
+      - echo Build finished
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: build
