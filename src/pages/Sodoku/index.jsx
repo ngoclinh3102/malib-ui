@@ -8,7 +8,7 @@ import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded'
 import { boards } from '../../stores/sodokupuzzle'
 import { checkValidSodoku, solveSodoku } from '../../utils/sodoku'
 
-const INIT_BOARD = boards[2]
+const INIT_BOARD = boards[1]
 
 const NUMBER_PAD = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
