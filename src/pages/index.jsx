@@ -1,3 +1,4 @@
-import Sodoku from "./Sodoku";
+import Sodoku from './Sodoku'
+import MusicPlayer from './MusicPlayer'
 
-export { Sodoku };
+export { Sodoku, MusicPlayer }
